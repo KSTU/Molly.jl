@@ -243,6 +243,10 @@ The types used should be bits types if the GPU is going to be used.
     charge::C = 0.0
     σ::S = 0.0u"nm"
     ϵ::E = 0.0u"kJ * mol^-1"
+    #
+    α = 3.0
+    rₘ = 0.3u"nm"
+    ε = 0.0u"kJ * mol^-1"
 end
 
 function Base.zero(::Atom{T, M, C, S, E}) where {T, M, C, S, E}

@@ -196,6 +196,7 @@ function pairwise_forces!(fs_nounits, atoms, coords, velocities, boundary, neigh
                     f += force(inter, dr, atoms[i], atoms[j], force_units, false, coords[i],
                                coords[j], boundary, velocities[i], velocities[j], step_n)
                 end
+                #println("force ", f, " force_units ", force_units)
                 check_force_units(f, force_units)
                 f_ustrip = ustrip.(f)
                 fs_nounits[i] -= f_ustrip
